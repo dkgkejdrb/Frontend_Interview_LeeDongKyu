@@ -1,0 +1,60 @@
+.myTimePickerWrapper {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.outFrame {
+    display: flex;
+}
+
+.leftFrame {
+    background-color: #fff;
+    min-width: 60px;
+    height: 180px;
+    overflow: scroll;
+    border-right: 1px solid #606062;
+}
+
+.rightFrame {
+    background-color: #fff;
+    min-width: 60px;
+    height: 180px;
+    overflow: scroll;
+}
+
+
+.timePickerBoard {
+    position: absolute;
+    top: 34px;
+    max-width: 122px;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #606062;
+}
+
+.timePickerInput {
+    max-width: 86px;
+    text-align: center;
+}
+
+.timeOption {
+    height: 25px;
+    background-color: #fff;
+    border: none;
+}
+
+.timePickerBoard>.secondRow {
+   background-color: #fff; 
+   display: flex;
+   justify-content: flex-end;
+}
+
+.timeUpdateBtn {
+    font-size: 12px;
+    padding: 3px 8px;
+    background-color: #5a5b5d;
+    color: white;
+}

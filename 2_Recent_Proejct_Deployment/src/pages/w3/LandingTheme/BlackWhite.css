@@ -1,0 +1,426 @@
+.BWheader {
+    width: 860px;
+}
+
+.DialogueBoxBW {
+    min-width: 336px;
+    max-width: 336px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+    /* background-color: rgb(76, 124, 235); */
+    
+    /* display: "flex", flexDirection: "column", alignItems: "flex-start" */
+}
+
+.chatbotMessageBW {
+    max-width: 288px;
+    color: #000;
+    border-radius: 0px 20px 20px 20px;
+    background-color: #F0F0F0;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 20px 24px 20px 24px;
+    margin-top: 8px;
+    line-height: 24px;
+}
+
+.logDateBW {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.myMessageBoxBW {
+    min-width: 336px;
+    max-width: 336px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end;
+    margin-top: 24px;
+}
+
+.myMessageBW {
+    /* min-width: 288px; */
+    max-width: 288px;
+    border-radius: 20px 0px 20px 20px;
+    color: white;
+    background-color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 20px 24px 20px 24px;
+    margin-top: 8px;
+    line-height: 24px;
+}
+
+.BWbannerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+._BWbannerContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 860px;
+    min-width: 860px;
+}
+
+.BWContainer {
+    margin-top: 60px;
+    min-height: 120px;
+    color: #fff;
+    background-color: #000000;
+}
+
+.__BWContainer {
+    min-width: 380px;
+    max-width: 380px;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.__BWContainer_title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 46px;
+}
+
+.__BWContainer_description {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.BWchatbotIntroductionLine {
+    margin-top: 80px; 
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+._BWchatbotIntroductionLine {
+    width: 860px;
+    height: 35px;
+    display: flex;
+}
+
+.__BWchatbotIntroductionLine {
+    width: 130px;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.___BWchatbotIntroductionLine {
+    width: 730px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.____BWchatbotIntroductionLine {
+    width: 714px; 
+    height: 2px;
+    background-color: #fff;
+}
+
+.chatbotContainerBW {
+    width: 860px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.BWdashed {
+    margin-top: 24px;
+}
+
+.BWchatbotPurpose {
+    margin-top: 16px;
+    width: 422px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.BWexpectedEffect {
+    margin-top: 16px;
+    width: 422px;
+    font-weight: 400; 
+    font-size: 16px;
+    line-height: 24px;             
+}
+
+.BWchatbotDirections {
+    margin-top: 16px;
+    width: 422px;
+    font-weight: 400;
+    font-size: 16px;
+    white-space: pre-line;
+    line-height: 24px;
+}
+
+.BWleft {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.BWright {
+    margin-top: 60px;
+    position: relative;
+    width: 400px;
+    height: 760px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.BWdashed2 {
+    margin-top: 32px; 
+    width: 336px;
+}
+
+.BWfooter {
+    margin-top: 110px;
+    width: 100%;
+    text-align: end;
+    font-size: 8px;
+    color: #fff;
+    height: 30px;
+    font-weight: 700;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._BWfooter {
+    width: 860px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .DialogueBoxBW {
+        min-width: 312px;
+        max-width: 312px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 32px;
+    }
+    
+    .chatbotMessageBW {
+        max-width: 288px;
+        color: #000;
+        border-radius: 0px 20px 20px 20px;
+        background-color: #F0F0F0;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 20px 24px 20px 24px;
+        margin-top: 8px;
+        line-height: 24px;
+    }
+    
+    .logDateBW {
+        color: #000;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    
+    .myMessageBoxBW {
+        min-width: 312px;
+        max-width: 312px;
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-end;
+        margin-top: 24px;
+    }
+    
+    .myMessageBW {
+        /* min-width: 288px; */
+        max-width: 288px;
+        border-radius: 20px 0px 20px 20px;
+        color: white;
+        background-color: #000;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 20px 24px 20px 24px;
+        margin-top: 8px;
+        line-height: 24px;
+    }
+
+
+    .BWheader {
+        width: 100%;
+        text-align: center;
+    }
+
+    .BWbannerContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    ._BWbannerContainer {
+        display: flex;
+        flex-direction: column;
+        max-width: 360px;
+        min-width: 360px;
+    }
+
+    .BWContainer {
+        margin-top: 40px;
+        min-height: 120px;
+        color: #fff;
+        background-color: #000000;
+    }
+
+    .__BWContainer {
+        margin-top: 32px;
+        min-width: 360px;
+        max-width: 360px;
+        line-height: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .__BWContainer_title {
+        min-width: 328px;
+        max-width: 328px;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+    }
+
+    .__BWContainer_description {
+        min-width: 328px;
+        max-width: 328px;
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .BWchatbotIntroductionLine {
+        margin-top: 80px; 
+        width: 100%;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    ._BWchatbotIntroductionLine {
+        width: 328px;
+        height: 32px;
+        display: flex;
+    }
+
+    .__BWchatbotIntroductionLine {
+        width: 130px;
+        font-size: 32px;
+        font-weight: 900;
+    }
+
+    .___BWchatbotIntroductionLine {
+        width: 198px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .____BWchatbotIntroductionLine {
+        width: 182px; 
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .chatbotContainerBW {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .BWdashed {
+        margin-top: 24px;
+        width: 328px!important;
+    }
+
+    .BWchatbotPurpose {
+        margin-top: 16px;
+        width: 328px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .BWexpectedEffect {
+        margin-top: 16px;
+        width: 328px;
+        font-weight: 400; 
+        font-size: 16px;
+        line-height: 24px;             
+    }
+
+    .BWchatbotDirections {
+        margin-top: 16px;
+        width: 328px;
+        font-weight: 400;
+        font-size: 16px;
+        white-space: pre-line;
+        line-height: 24px;
+    }
+
+    .BWleft {
+        width: 328px;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .BWright {
+        margin-top: 60px;
+        position: relative;
+        width: 360px;
+        height: 760px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+    }
+
+    .BWdashed2 {
+        margin-top: 32px; 
+        width: 312px!important;
+    }
+
+    .BWfooter {
+        margin-top: 60px;
+        width: 100%;
+        text-align: end;
+        font-size: 8px;
+        color: #fff;
+        height: 30px;
+        font-weight: 700;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ._BWfooter {
+        padding-right: 14px;
+        width: 860px;
+    }
+}

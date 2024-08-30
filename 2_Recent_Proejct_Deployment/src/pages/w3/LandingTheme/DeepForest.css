@@ -1,0 +1,578 @@
+.DialogueBoxDF {
+    min-width: 860px;
+    max-width: 860px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 24px;
+}
+
+.chatbotMessageDF {
+    /* padding: 16px 8px 20px 8px;  */
+    margin-top: 8px;
+    max-width: 820px;
+    color: #fff;
+    border-radius: 0px 20px 20px 20px;
+    background-color: #635553;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 20px 24px 20px 24px;
+}
+
+.logDateDF {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.myMessageBoxDF {
+    margin-top: 24px;
+    min-width: 860px;
+    max-width: 860px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end;
+}
+
+.myMessageDF {
+    margin-top: 8px;
+    max-width: 820px;
+    border-radius: 20px 0px 20px 20px;
+    color: #000000;
+    /* background-color: #000; */
+    background: #F6F2EC;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 20px 24px 20px 24px;
+    text-align: right;
+}
+
+.header {
+    width: 860px;
+    color: #150A00;
+    font-weight: 700;
+    background-color: #EEE6DB;
+}
+
+.allContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    min-height: 120px;
+    color: #000;
+    background-color: #F6F2EC
+}
+
+.bannerContainer {
+    width: 100%;
+    display: flex; 
+    justify-content: center
+}
+
+.upperFrame {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;        
+    max-width: 694px;
+    min-width: 694px;
+}
+
+.downFrame {
+    margin-top: 60px;
+    min-width: 860px;
+    max-width: 860px;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageSettingsTitle {
+    width: 100%;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    color: #635553;
+    text-align: center;
+}
+
+.pageSettingsDescription {
+    margin-top: 24px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.chatbotBoxSand {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+}
+
+.middleContainer {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 80px;
+    min-height: 120px;
+    color: #000;
+    background-color: #F6F2EC;
+}
+
+.chatbotSand {
+    margin-top: 80px;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.chatbotUpperContainer {
+    width: 860px;
+    display: flex;
+}
+
+.chatbotContainer {
+    margin-top: 60px;
+    overflow-Y: scroll;
+    overflow-X: hidden;
+    width: 100%;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chatbotName_chatbotIntroduction {
+    margin-left: 16px;
+    max-width: 684px;
+    min-width: 684px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landingPageSettingData_pageSettings_chatbotName {
+    min-width: 764px;
+    max-width: 764px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 900;
+    color: #635553;
+    display: flex;
+}
+
+.landingPageSettingData_pageSettings_chatbotIntroduction {
+    margin-top: 4px;
+    min-width: 764px;
+    max-width: 764px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #000;
+    font-weight: 400;
+}
+
+.dashed {
+    margin-top: 24px;
+    width: 860px;
+    height: 1px; 
+}
+
+.chatbotInputMessageClickedSand {
+    width: 860px;
+    background-color: white;
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+}
+
+.chatbotInputMessageSand {
+    width: 860px;
+    background-color: white;
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+._chatbotInputMessage {
+    width: 808px;
+    height: 52px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: none!important;
+}
+
+.chatbotIntroductionBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.chatbotIntroduction {
+    display: flex;
+    flex-direction: column;
+    width: 860px;
+    min-height: 546px;
+    padding: 60px;
+    background-color: #F6F2EC;
+}
+
+.chatbotPurpose {
+    margin-top: 24px;
+    width: 780px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pageSettings_chatbotPurpose {
+    margin-top: 12px;
+    width: 860px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #635553;
+    line-height: 24px;
+}
+
+.pageSettings_expectedEffect {
+    margin-top: 12px;
+    width: 422px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #635553;
+}
+
+.pageSettings_chatbotDirections {
+    margin-top: 12px;
+    width: 860px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #635553;
+    line-height: 26px;
+    white-space: pre-line;
+}
+
+.footer {
+    width: 100%;
+    text-align: end;
+    font-size: 8px;
+    color: #fff;
+    height: 30px;
+    font-weight: 700;
+    background-color: #635553;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.footerName {
+    width: 860px;
+}
+
+/* 모바일 화면  */
+@media only screen and (max-width: 600px) {
+    .header {
+        text-align: center;
+        width: 100%;
+        color: #150A00;
+        font-weight: 700;
+        background-color: #EEE6DB;
+    }
+
+    .allContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        min-height: 120px;
+        color: #000;
+        background-color: #F6F2EC
+    }
+
+    .bannerContainer {
+        width: 100%;
+        display: flex; 
+        justify-content: center;
+    }
+
+    .upperFrame {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;        
+        max-width: 360px;
+        min-width: 360px;
+    }
+
+    .pageSettings_title {
+        width: 100%;
+        font-weight: 900px;
+        font-size: 32px;
+        line-height: 32px;
+        color: #635553;
+        text-align: "center"
+    }
+
+    .chatbotBoxSand {
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+    }
+
+    .middleContainer {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        margin-top: 40px;
+        min-height: 120px;
+        color: #000;
+        background-color: #F6F2EC;
+    }
+
+    .pageSettingsTitle {
+        width: 100%;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 32px;
+        color: #635553;
+        text-align: center;
+    }
+
+    .downFrame {
+        margin-top: 32px;
+        max-width: 360px;
+        min-width: 360px;
+        line-height: normal;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chatbotSand {
+        margin-top: 40px;
+        position: relative;
+        width: 100%;
+        height: 843px;
+        /* background-color: #fff; */
+        display: flex;
+        justify-content: center;
+    }
+
+    .chatbotUpperContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chatbotContainer {
+        margin-top: 40px;
+        overflow-Y: scroll;
+        overflow-X: hidden;
+        width: 100%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chatbotName_chatbotIntroduction {
+        margin-left: 0px!important;
+        min-width: 360px;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .landingPageSettingData_pageSettings_chatbotName {
+        min-width: 360px;
+        max-width: 360px;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 900;
+        color: #635553;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .landingPageSettingData_pageSettings_chatbotIntroduction {
+        margin-top: 4px;
+        min-width: 328px;
+        max-width: 328px;
+        font-size: 16px;
+        line-height: 32px;
+        color: #000;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .dashed {
+        margin-top: 24px;
+        width: 360px!important;
+        height: 1px; 
+    }
+
+    .DialogueBoxDF {
+        min-width: 360px;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 24px;
+    }
+
+    .chatbotMessageDF {
+        /* padding: 16px 8px 20px 8px;  */
+        margin-top: 8px;
+        max-width: 360px;
+        color: #fff;
+        border-radius: 0px 20px 20px 20px;
+        background-color: #635553;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 20px 24px 20px 24px;
+    }
+    
+    .logDateDF {
+        color: #000;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    
+    .myMessageBoxDF {
+        margin-top: 24px;
+        min-width: 360px;
+        max-width: 360px;
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-end;
+    }
+    
+    .myMessageDF {
+        margin-top: 8px;
+        max-width: 820px;
+        border-radius: 20px 0px 20px 20px;
+        color: #000000;
+        /* background-color: #000; */
+        background: #F6F2EC;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 20px 24px 20px 24px;
+        text-align: right;
+    }
+
+    .chatbotInputMessageClickedSand {
+        width: 328px;
+        background-color: white;
+        position: absolute;
+        bottom: 24px;
+        display: flex;
+        justify-content: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+    }
+    
+    .chatbotInputMessageSand {
+        width: 328px;
+        background-color: white;
+        position: absolute;
+        bottom: 24px;
+        display: flex;
+        justify-content: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+    }
+
+    ._chatbotInputMessage {
+        width: 304px!important;
+        height: 52px;
+        border-radius: 20px;
+        border: none;
+        box-shadow: none!important;
+    }
+
+    .chatbotIntroductionBox {
+        width: 328px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .chatbotIntroduction {
+        display: flex;
+        flex-direction: column;
+        width: 328px;
+        min-height: 546px;
+        padding: 60px;
+        background-color: #F6F2EC;
+    }
+
+    .chatbotPurpose {
+        margin-top: 24px;
+        min-width: 328px;
+        max-width: 328px;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pageSettings_chatbotPurpose {
+        margin-top: 12px;
+        min-width: 328px;
+        max-width: 328px;
+        font-weight: normal;
+        font-size: 16px;
+        color: #635553;
+        line-height: 24px;
+    }
+
+    .pageSettings_expectedEffect {
+        margin-top: 12px;
+        min-width: 328px;
+        max-width: 328px;
+        font-weight: normal;
+        font-size: 16px;
+        color: #635553;
+    }
+
+    .pageSettings_chatbotDirections {
+        margin-top: 12px;
+        min-width: 328px!important;
+        max-width: 328px!important;
+        font-weight: normal;
+        font-size: 16px;
+        color: #635553;
+        line-height: 26px;
+        white-space: pre-line;
+    }
+
+    .footer {
+        width: 100%;
+        text-align: end;
+        font-size: 8px;
+        color: #fff;
+        height: 30px;
+        font-weight: 700;
+        background-color: #635553;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+    
+    .footerName {
+        width: 360px;
+    }
+}
