@@ -3,7 +3,7 @@ import { Space, Image, Button, Input } from 'antd';
 import axios from 'axios';
 import { useRef, useState, useEffect } from 'react';
 import uuid from 'react-uuid';
-import useDidMountEffect from '../../w3/useDidMountEffect';
+import useDidMountEffect from '../../../hooks/useDidMountEffect';
 import { useSelector } from 'react-redux';
 import './BlueHouse.css'
 // import mainBannerBHFrame from '../../../assets/mainBannerBHFrame.png';
@@ -21,17 +21,17 @@ const getTime = () => {
   let hour = "";
   let min = "";
 
-  if(_hour < 13) {
+  if (_hour < 13) {
     hour = `오전 ${_hour}시`;
   } else {
-    if ((_hour-12) < 10) {
-      hour = `오후 0${(_hour-12)}시`;
+    if ((_hour - 12) < 10) {
+      hour = `오후 0${(_hour - 12)}시`;
     } else {
-      hour = `오후 ${_hour-12}시`
+      hour = `오후 ${_hour - 12}시`
     }
   }
 
-  if(_min < 10) {
+  if (_min < 10) {
     min = `0${_min}분`
   } else {
     min = `${_min}분`
@@ -53,10 +53,10 @@ const BlueHouse = () => {
     "Content-Type": "application/json",
   };
 
-  const landingPageSettingData = useSelector( state => {
+  const landingPageSettingData = useSelector(state => {
     return state.landingPageSettingSlice.landingPageSetting;
   })
-  
+
   // 로딩
   const [loading, setLoading] = useState(false);
 
@@ -75,7 +75,7 @@ const BlueHouse = () => {
     setChatText(
       landingPageSettingData.practiceItem.text +
       landingPageSettingData.practiceItem.restart.replace(/↵/g, '\n') + // 수정1
-        e.target.value
+      e.target.value
     );
   };
 
@@ -95,7 +95,7 @@ const BlueHouse = () => {
 
     let __stopBefore = learningData["stopBefore"].split(','); // 수정1
     let _stopBefore = __stopBefore.map(item => item.replace(/↵/g, '\n')); // 수정1
-    
+
     const data = {
       name: learningData.name,
       engine: learningData.engine,
@@ -113,7 +113,7 @@ const BlueHouse = () => {
       includeTokens: true,
       includeAiFilters: true,
       includeProbs: false,
-  }
+    }
 
     axios
       // .post(TEST_SUBMIT_URL, data, config)
@@ -169,13 +169,13 @@ const BlueHouse = () => {
     setChatbotInputclicked(false);
   }
 
-  useEffect(()=>{
-    if(chatbotInputclicked) {
+  useEffect(() => {
+    if (chatbotInputclicked) {
       setChatbotInputClassname("chatbotInputMessageClickedBH");
     } else {
       setChatbotInputClassname("chatbotInputMessageBH");
     }
-  },[chatbotInputclicked])
+  }, [chatbotInputclicked])
 
   return (
     <div
@@ -234,9 +234,9 @@ const BlueHouse = () => {
                   </div>
                 </div>
                 <div className="BHmainBannerFrame">
-                  <Image preview={false} 
-                    // src={mainBannerBHFrame}
-                    ></Image>
+                  <Image preview={false}
+                  // src={mainBannerBHFrame}
+                  ></Image>
                   <div className="_BHmainBanner">
                     <Image
                       preview={false}
@@ -369,7 +369,7 @@ const BlueHouse = () => {
                         height: 52,
                         border: "none",
                       }}
-                      icon={<Image 
+                      icon={<Image
                         // src={sendIconBH} 
                         preview={false} />}
                     ></Button>
@@ -419,7 +419,7 @@ const BlueHouse = () => {
                     className="BHdashed"
                     style={{ marginTop: 24 }}
                     preview={false}
-                    // src={dashedBH2}
+                  // src={dashedBH2}
                   ></Image>
                 </div>
 
@@ -449,7 +449,7 @@ const BlueHouse = () => {
                     className="BHdashed"
                     style={{ marginTop: 24 }}
                     preview={false}
-                    // src={dashedBH2}
+                  // src={dashedBH2}
                   ></Image>
                 </div>
 
@@ -479,7 +479,7 @@ const BlueHouse = () => {
                     className="BHdashed"
                     style={{ marginTop: 24 }}
                     preview={false}
-                    // src={dashedBH2}
+                  // src={dashedBH2}
                   ></Image>
                 </div>
 

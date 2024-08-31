@@ -1,4 +1,4 @@
-// 첫 렌더링 시에 실행되지 않고, 배열 안에 state가 변화할 때만 실행하는 커스텀 훅
+// 첫 렌더링 이후에만 실행하는 커스텀 훅
 
 import { useEffect, useRef } from 'react';
 

@@ -3,7 +3,7 @@ import { Space, Image, Button, Input } from 'antd';
 import axios from 'axios';
 import { useRef, useState, useEffect } from 'react';
 import uuid from 'react-uuid';
-import useDidMountEffect from '../../w3/useDidMountEffect';
+import useDidMountEffect from '../../../hooks/useDidMountEffect';
 import { useSelector } from 'react-redux';
 import './DeepForest.css'
 // import dashedDF2 from '../../../assets/dashedDF2.png'
@@ -19,17 +19,17 @@ const getTime = () => {
   let hour = "";
   let min = "";
 
-  if(_hour < 13) {
+  if (_hour < 13) {
     hour = `오전 ${_hour}시`;
   } else {
-    if ((_hour-12) < 10) {
-      hour = `오후 0${(_hour-12)}시`;
+    if ((_hour - 12) < 10) {
+      hour = `오후 0${(_hour - 12)}시`;
     } else {
-      hour = `오후 ${_hour-12}시`
+      hour = `오후 ${_hour - 12}시`
     }
   }
 
-  if(_min < 10) {
+  if (_min < 10) {
     min = `0${_min}분`
   } else {
     min = `${_min}분`
@@ -51,10 +51,10 @@ const DeepForest = () => {
     "Content-Type": "application/json",
   };
 
-  const landingPageSettingData = useSelector( state => {
+  const landingPageSettingData = useSelector(state => {
     return state.landingPageSettingSlice.landingPageSetting;
   })
-  
+
   // 로딩
   const [loading, setLoading] = useState(false);
 
@@ -73,7 +73,7 @@ const DeepForest = () => {
     setChatText(
       landingPageSettingData.practiceItem.text +
       landingPageSettingData.practiceItem.restart.replace(/↵/g, '\n') + // 수정1
-        e.target.value
+      e.target.value
     );
   };
 
@@ -111,7 +111,7 @@ const DeepForest = () => {
       includeTokens: true,
       includeAiFilters: true,
       includeProbs: false,
-  }
+    }
 
     axios
       // .post(TEST_SUBMIT_URL, data, config)
@@ -167,13 +167,13 @@ const DeepForest = () => {
     setChatbotInputclicked(false);
   }
 
-  useEffect(()=>{
-    if(chatbotInputclicked) {
+  useEffect(() => {
+    if (chatbotInputclicked) {
       setChatbotInputClassname("chatbotInputMessageClickedSand");
     } else {
       setChatbotInputClassname("chatbotInputMessageSand");
     }
-  },[chatbotInputclicked])
+  }, [chatbotInputclicked])
 
   return (
     <div
@@ -339,7 +339,7 @@ const DeepForest = () => {
                         height: 52,
                         border: "none",
                       }}
-                      icon={<Image 
+                      icon={<Image
                         // src={sendIconDF}
                         preview={false} />}
                     />
@@ -382,7 +382,7 @@ const DeepForest = () => {
                   <Image
                     className="dashed"
                     preview={false}
-                    // src={dashedDF2}
+                  // src={dashedDF2}
                   ></Image>
                 </div>
 
@@ -404,7 +404,7 @@ const DeepForest = () => {
                   <Image
                     className="dashed"
                     preview={false}
-                    // src={dashedDF2}
+                  // src={dashedDF2}
                   ></Image>
                 </div>
 
@@ -433,7 +433,7 @@ const DeepForest = () => {
                   <Image
                     className="dashed"
                     preview={false}
-                    // src={dashedDF2}
+                  // src={dashedDF2}
                   ></Image>
                 </div>
 

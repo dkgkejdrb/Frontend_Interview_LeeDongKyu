@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Modal } from 'antd';
 
 const F5KeyAlertModal = () => {
   useEffect(() => {
