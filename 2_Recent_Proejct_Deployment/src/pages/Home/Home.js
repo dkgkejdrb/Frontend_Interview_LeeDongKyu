@@ -19,7 +19,7 @@ const Home = () => {
                 </Link>
                 <Link to="/landingpagesettings" style={{ width: 450 }}>
                     <Button style={{ marginTop: 20, width: "100%" }}>
-                        Configure Personal Chatbot Landing Page</Button>
+                        Publishing Personal Chatbot Landing Page with no-coding</Button>
                 </Link>
             </>
         </main>
