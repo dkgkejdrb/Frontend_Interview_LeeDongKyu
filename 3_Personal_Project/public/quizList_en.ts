@@ -1,12 +1,8 @@
 "use client";
 
-import type { GetProps, TreeDataNode } from 'antd';
-import { Tree } from 'antd';
+import type { TreeDataNode } from 'antd';
 
 export function TreeLayout() {
-
-    type DirectoryTreeProps = GetProps<typeof Tree.DirectoryTree>;
-    const { DirectoryTree } = Tree;
     const treeData: TreeDataNode[] = [
         {
             title: 'Data Type',
