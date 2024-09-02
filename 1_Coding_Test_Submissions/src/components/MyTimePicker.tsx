@@ -14,7 +14,7 @@ interface MyTimePickerProps {
 }
 
 function MyTimePicker({ activeKey, index, sliceIndex, isStartTime }: MyTimePickerProps) {
-    // 전역 상태(시간표 data) 불러오기
+    // Retrieve time table data into the global state
     const data = useSelector((state: RootState) => state.TimeTableDataState.value);
     const dispatch = useDispatch();
 
@@ -22,7 +22,7 @@ function MyTimePicker({ activeKey, index, sliceIndex, isStartTime }: MyTimePicke
     const [minute, setMinute] = useState<string>("00");
     const [inputTime, setInputTime] = useState<string>("00:00");
 
-    // 첫 화면 렌더링 시, data 뿌리기
+    // On mount, display data
     useEffect(() => {
         const timeSlot = data[activeKey][index + sliceIndex];
         if (isStartTime) {
@@ -46,17 +46,17 @@ function MyTimePicker({ activeKey, index, sliceIndex, isStartTime }: MyTimePicke
         setMinute(_minute);
     })
 
-    // input 클릭 시 Timepicker 창 열기
+    // When user clicks the input component, open Timepicker component
     const [isOpen, setIsOpen] = useState(false);
     const inputHandler = () => {
         setIsOpen(!isOpen);
     }
 
-    // Timepicker의 확인 버튼을 클릭 시, 전역 상태(시간표 data) 갱신
+    // When user clicks the 'OK' btn on Timepicker, update global state(timetable data)
     const timeBtnHandelr = ((e: MouseEvent<HTMLButtonElement>) => {
         setIsOpen(false);
 
-        const _inputTime = inputTime || "";  // undefined일 경우 빈 문자열로 대체
+        const _inputTime = inputTime || "";
 
         const timeSlotKey = isStartTime ? "startTime" : "endTime";
 
@@ -72,7 +72,7 @@ function MyTimePicker({ activeKey, index, sliceIndex, isStartTime }: MyTimePicke
                     timeSlot
             )
         };
-        dispatch(setValue(_data)); // 전역 상태(시간표 data) 갱신
+        dispatch(setValue(_data)); // Update global state(time table data)
     });
 
     useEffect(() => {

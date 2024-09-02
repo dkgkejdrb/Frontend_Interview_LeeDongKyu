@@ -8,20 +8,20 @@ import { RootState } from '../store';
 import './TimeTable.css';
 
 function TimeTable() {
-    // 전역 상태(시간표 data) 불러오기
+    // Retrieve timetable data from the global state
     const data = useSelector((state: RootState) => state.TimeTableDataState.value);
 
-    // 커스텀 훅에서 상태값 받아오기. API 연동 시, data, loading, error 다 받아와야 함
+    // Get state values from the custom hook. When connecting to the API, you should receive data, loading, and error
     const { loading } = useTimeTableData();
     const [tabItems, setTabItems] = useState<TabsProps['items']>([]);
 
-    // 학급의 시간표 data 조회를 위한 key
+    // Key for querying the timetable data of the selected class
     const [clickedTabKey, setClickedTabKey] = useState<string>("");
     const TabsOnChange = (key: string) => {
         setClickedTabKey(key);
     };
 
-    // 학급 클릭 시, 해당 학급의 시간표 표시하기
+    // When class is clicked, display the timetalbe
     useEffect(() => {
         if (data && !loading) {
             const _tabItems = Object.keys(data).map((tabItem) => {

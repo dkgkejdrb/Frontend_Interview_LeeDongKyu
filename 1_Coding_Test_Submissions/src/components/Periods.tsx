@@ -20,18 +20,18 @@ interface periodProps {
 }
 
 function Periods({ clickedTabKey }: periodsProps) {
-    // 전역 상태(시간표 data) 불러오기
+    // Retrieve time table data into the global state
     const data = useSelector((state: RootState) => state.TimeTableDataState.value);
     const dispatch = useDispatch();
 
-    // 첫 화면 렌더링 시, clickedTabKey(undefined)를 피하기 위해 첫번째 키의 값으로 초기 설정
+    // On mount, to avoid issue(clickedTabKey(undefined)), set default value to the first key in Tab
     const firstTabKey = Object.keys(data)[0];
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedKey, setSelectedKey] = useState<string | null>(); // key는 학급명, 탭 라벨
-    const [selectedIndex, setSelectedIndex] = useState<number | null>(); // index는 교시
+    const [selectedKey, setSelectedKey] = useState<string | null>(); // key: classname, tab label name
+    const [selectedIndex, setSelectedIndex] = useState<number | null>(); // index: class number
 
-    // 삭제 여부 모달에서 "삭제하기" 클릭했을 때
+    // When user clicks "Delete" button in the warning Modal
     const handleOk = () => {
         if (selectedKey && selectedIndex !== null) {
             const newArray = [...data[selectedKey]];
@@ -43,7 +43,7 @@ function Periods({ clickedTabKey }: periodsProps) {
             }
 
             newArray.push({ startTime: "", endTime: "" });
-            // 전역 상태(시간표 data) 갱신
+            // Update global state(timetable data)
             dispatch(setValue({
                 ...data,
                 [selectedKey]: newArray
@@ -55,25 +55,24 @@ function Periods({ clickedTabKey }: periodsProps) {
         setIsModalOpen(false);
     }
 
-    // 삭제 버튼을 눌렀을 때
+    // When users clikcs "Delete" btn
     const deleteBtnHandler = (e: MouseEvent<HTMLButtonElement>) => {
 
-        // 삭제 여부 모달 팝업
+        // Show the Modal
         setIsModalOpen(true);
 
-        // 버튼 id에서 key와 index 추출
+        // Extract both "key" and "index" from DOM's id
         const buttonId = e.currentTarget.id;
         const [key, index] = buttonId.split('@');
 
-        // 추출한 key와 idnex 상태로 저장해서 handleOK에서 사용
         setSelectedKey(key);
         setSelectedIndex(Number(index));
     }
 
-    // 첫 화면 렌더링 시, 첫번째 key 사용 (예: 2A-1 (201~))
+    // On mount, use "first key" (Example: 2A-1 (201~))
     const activeKey = clickedTabKey || firstTabKey;
 
-    // 추가 버튼을 눌렀을 때
+    // When user clicks "Add" btn
     const addBtnHandler = (e: MouseEvent<HTMLButtonElement>) => {
         const buttonName = e.currentTarget.name;
         let startIndex = 0;
@@ -88,18 +87,18 @@ function Periods({ clickedTabKey }: periodsProps) {
 
         const tmpArray = data[activeKey];
 
-        // 추가 버튼에 해당하는 Period에 맞게 총 5길이의 교시 배열에서 비어있는 교시 위치 찾기
+        // Find the first empty time slot in period time that user have selected
         const emptyIndexArray = tmpArray
             .slice(startIndex, startIndex + 5)
-            .map((timeSlot, index) => startIndex + index) // 교시 인덱스를 먼저 매핑
+            .map((timeSlot, index) => startIndex + index) // mapping index on based 3-period section
             .filter((_, index) => {
                 const timeSlot = tmpArray[startIndex + index];
                 return !timeSlot.startTime && !timeSlot.endTime;
             });
 
-        // 비어있는 교시 위치 배열에서 첫 번째 위치만 추출
+        // // Extract the first empty slot from the array of empty time slots
         const emptyIndex = emptyIndexArray.filter(index => index !== undefined)[0];
-        // 비어있는 교시 위치를 기준으로 교시 배열 슬라이싱하고 추가 후, 결합하기
+        // Slice the period array at the empty slot position, add the new period, then merge
         if (emptyIndex !== undefined) {
             const beforeArray = tmpArray.slice(0, emptyIndex);
             const afterArray = tmpArray.slice(emptyIndex, tmpArray.length);
@@ -114,10 +113,10 @@ function Periods({ clickedTabKey }: periodsProps) {
         }
     }
 
-    // 수업 추가, 삭제, 시간 설정 컴포넌트
-    // labelText, labelTime: 라벨
-    // sliceIndex: 설정한 시간이 표시될 구간을 나타내는 값
-    // addBtnText: 버튼의 name. 해당 값으로 전역 상태(시간표 data) 갱신
+    // Component for adding, deleting, and setting class times
+    // labelText, labelTime: Labels
+    // sliceIndex: Indicates the section where the set time is displayed
+    // addBtnText: Button name, used to update global state (timetable data)
     const Period = ({ labelText, labelTime, sliceIndex, addBtnText }: periodProps) => {
         return (
             <div className="period">
