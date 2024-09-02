@@ -1,115 +1,126 @@
-## 프로젝트 개요
+## Project Introduction
 
-본 프로젝트는 관리자가 시간표를 설정하여 사용자에게 운영시간을 안내하는 기능을 제공합니다. 주요 기능으로는 시간대별 교시 관리 기능, 시간표의 시간 설정 기능, 타블렛 PC와 데스크탑 반응형 UI 등을 제공합니다.
+**NOTICE: This source code is my submission for a coding test as a application process. The code received a high score, allowing me to successfully pass the test due to its quality.**
+
+This project provides functionality for administrators to set up schedules and infrom user of operationg hours.
+
+Key features are:
+
+1. Managing class periods by time slot
+2. Configuring start and end times for classes
+3. Offering a responsive UI for both tablet PCs and desktops
+
+--------
+
+### Coding Test Requirements (2024.08.10 ~ 11)
+
+1. **Submission is completed within 2days.**
+
+2. **Automatic Adjustment of Class Periods:** When adding or deleting a class period, subsequent periods should automatically adjust. For example, if there are three periods and the second period is deleted, the third period should shift to become the second period. Similarly, if a new period is added in the morning slot while periods exist in the afternoon slot, the existing afternoon periods should be renumbered accordingly.
+3. **Limit on Class Periods per Time Slot:** Each time slot (morning, afternoon, evening) can manage a maximum of 5 periods. For example, if there are 5 periods in the morning slot and one period in the afternoon, deleting the 5th period should shift the afternoon period to the 5th slot in the morning.
+4. **Confirmation Modal on Deletion:** A confirmation modal should appear when the delete button is clicked to verify the deletion action.
+5. **Time Selection for Schedule:** Users should be able to select the time for each period. This includes selecting the hour (00-24) and minute (00-59) for each time block.
+6. **Page Path:** The page should be accessible via the `/timetable` route.
+7. **Responsive UI Design:** Although most users will access the application via tablet PCs, it should also be usable on desktops. The page width should be set to a maximum of 1024px and centered on the screen.
+8. **Example of the UI screen that they asked me to submit**:
+   ![](https://codetutorbot.blob.core.windows.net/image/3-1.png)
 
 
 
-## 목차
-
-[TOC]
 
 
+## Installation and Running
 
-## 설치 및 실행 방법
+### Requirements
 
-### 요구사항
-
-- Node.js (최소 v14.0.0 이상)
+- Node.js (v >= 14.0.0)
 - npm (Node Package Manager)
 
 
 
-### 개발 도구
+### Tool
 
 - IDE: Visual Studio Code
-- 언어: Typescript
-- 프레임워크: React (v18.3.3)
+- Language: Typescript
+- Framework: React (v18.3.3)
 
 
 
-### Node.js 설치
+### Node.js Installation
 
-이 프로젝트를 실행하려면 Node.js가 필요합니다. Node.js와 함께 npm도 자동으로 설치됩니다. 이미 PC에 Node.js가 설치되어 있다면, 해당 단계를 스킵하세요.
+To run this project, you need Node.js. If you have already installed Node.js, you can skip the following process.
 
-1. #### Node.js 다운로드
+1. #### Download and Install Node.js
 
-   Node.js 공식 웹사이트에 접속하여 운영 체제에 맞는 최신 LTS(Long Term Support) 버전을 다운로드합니다.
-
-   
-
-2. #### 설치 실행
-
-   다운로드한 설치 파일을 실행하고 안내에 따라 설치를 완료합니다.
+   Visit the Node.js website and download the latest LTS version according to your OS. After downloading the installer, run and install Node.js
 
    
 
-3. #### 설치 확인
+2. #### Verify installation
 
-   터미널(명령 프롬프트)에서 다음 명령어를 입력하여 Node.js와 npm이 올바르게 설치되었는지 확인합니다.
+   On termianl or command propmt, type the following commands in order to check the versions of Node.js and npm.
 
    ```bash
    node -v
    npm -v
    ```
 
-   위 명령어가 각각 Node.js와 npm의 버전을 출력하면, 설치가 성공적으로 완료된 것 입니다.
+   If above commands return the version of Node.js and npm, the installation was successful.
 
 
 
-### 프로젝트 설치 및 실행
+### Project Setup and Execution
 
-1. #### 다운로드
+1. #### Download
 
-   프로젝트를 다운로드하여 원하는 경로에 압축 해제합니다.
+   Download the project and unzip it.
 
    
 
-2. #### 패키지 설치
+2. #### Install packages
 
-   프로젝트의 의존성 패키지를 설치합니다.
+   Install the project's dependancies by running:
 
    ```bash
    npm install
    ```
 
-3. #### 개발 서버 실행
-
-   개발 환경에서 앱을 실행하기 위해 다음 명령어를 입력합니다.
+3. #### Start the dev server
 
    ```bash
    npm start
    ```
 
-4. #### 브라우저에서 확인
+4. #### Check in the borwser
 
-   실행 후 브라우저에서 http://localhost:3000/ 을 열어 다음과 같은 화면을 확인할 수 있습니다. 홈 화면에서 '시간표 관리로 이동' 버튼을 클릭하여 이동합니다.
+   After the server starts, open your browser and go to http://localhost:3000/. You will see the home screen and click a button('Set Up Timetable').
 
-   ![](https://codetutorbot.blob.core.windows.net/image/1.png)
+   ![](https://codetutorbot.blob.core.windows.net/image/3-2.png)
 
    ![](https://codetutorbot.blob.core.windows.net/image/2.png)
 
 
 
-## 기본 기능 설명
+## Project Structure
 
-### 1. 페이지 이동
+### 1. Route Pages
 
-#### 1.1. 설명
+#### 1.1. Description
 
-React Router를 사용하여 구현하였으며, 페이지 간의 네비게이션을 담당합니다.
-
-
-
-#### 1.2. 프로젝트 내의 파일 위치
-
-- **src/App.tsx** : 라우팅 설정이 포함된 파일
-- **src/pages**/ : 페이지 컴포넌트 디렉토리 
-  - **Home.tsx** : 홈 페이지
-  - **TimeTable.tsx** : 타임테이블 페이지
+Navigation between pages is managed using react-router-dom
 
 
 
-#### 1.3. 사용한 라이브러리
+#### 1.2. File Locations in the Project
+
+- **src/App.tsx** : Contains the routing configuration
+- **src/pages**/ : Directory for diffrent pages
+  - **Home.tsx** : Home page
+  - **TimeTable.tsx** : Timetable page
+
+
+
+#### 1.3. Library Used
 
 - **react-router-dom**
 
@@ -117,24 +128,24 @@ React Router를 사용하여 구현하였으며, 페이지 간의 네비게이�
 
 
 
-### 2. API 연동을 염두한 상태 관리
+### 2. Control Global State for API Connections
 
-#### 2.1. 설명
+#### 2.1. Description
 
-ERP 등에 데이터 등록, 수정을 위한 API 연동을 염두하여 수신한 시간표 데이터를 전역 상태로 관리했습니다. Redux 툴킷을 사용하여 상태를 중앙에서 관리합니다.
-
-
-
-#### 2.2. 프로젝트 내의 파일 위치
-
-- **src/store/index.ts** : Redux 스토어 설정
-- **src/store/slice/TimeTableSlice.ts** : 시간표 데이터 전역 상태 및 리듀서 관리
-- **src/hooks/** : 커스텀 훅 디렉토리
-  - **useTimeTableData.tsx** : 시간표 데이터를 수신하기 위한 커스텀 훅.
+Timetable data from ERP system, such as registration and revision data, is managed in the global state via API.
 
 
 
-#### 2.3. 사용한 라이브러리
+#### 2.2. File Locations in the Project
+
+- **src/store/index.ts** : Contains Redux store configurations
+- **src/store/slice/TimeTableSlice.ts** : Global state and reducers for timetable data 
+- **src/hooks/** : Custom hook directory
+  - **useTimeTableData.tsx** : Gets timetable data fromthe ERP system
+
+
+
+#### 2.3. Libary Used
 
 - **@reduxjs/toolkit**
 - **react-redux**
@@ -143,24 +154,24 @@ ERP 등에 데이터 등록, 수정을 위한 API 연동을 염두하여 수신�
 
 
 
-### 3. 시간표 표시
+### 3. Reusable UI Componetns
 
-#### 3.1. 설명
+#### 3.1. Descriptions
 
-태블릿(600px)과 PC(1024px 이상)에서 운영자가 시간표를 설정, 관리할 수 있는 기능을 시각적으로 제공.
-
-
-
-#### 3.2. 프로젝트 내의 파일 위치
-
-- **src/pages/TimeTable.tsx** : 시간표를 설정, 관리할 수 있는 페이지
-- **src/components/** : 재사용 가능한 UI 컴포넌트 디렉터리
-  - **Periods.tsx** : 수업 추가, 삭제, 시간 설정 컴포넌트
-  - **MyTimePicker.tsx** : 시간(0~24), 분(0~59)을 선택할 수 있는 컴포넌트. 
+UI Components used for the a responsive UI(tablet PC: 600px, desktop: 1024px) and for managing the timetable for an administrator
 
 
 
-#### 3.3. 사용한 라이브러리
+#### 3.2. File Locations in the Project
+
+- **src/pages/TimeTable.tsx** : Configures the timetable, and manages pages
+- **src/components/** : Directory
+  - **Periods.tsx** : Adds classes, delete theme and sets time slots
+  - **MyTimePicker.tsx** : Selects hour(0~24) and minute(0~59)
+
+
+
+#### 3.3. Library Used
 
 - **antd**
 
@@ -168,32 +179,33 @@ ERP 등에 데이터 등록, 수정을 위한 API 연동을 염두하여 수신�
 
 
 
-## 고도화된 부분
+## Enhancements 
 
-### 1. API 연동을 대비한 설계
+### 1. Designing for API Connection
 
-ERP 등에서 API로 전달된 정보를 동적으로 표시하기 위해, 컴포넌트를 설계하고 개발했습니다. 프로젝트 시작 전, 필요한 데이터를 화면에 표시될 정보를 고려하여 인터페이스를 정의하고, 이를 바탕으로 더미 데이터를 설정했습니다.
+To dynamically display information from the ERP system via API, components were designed and developed accordingly. Before starting the project, I identified the necessary data to be dsiplayed on the screen and defined the corresponding data interfaces. Based on these interfaces, I set up dummy data for development.
 
-특히, 수업을 추가하거나 제거하는 기능을 리스트 형태로 구현하는 것이 적합하다고 판단하였고, 이로 인해 해당 기능을 수월하게 개발할 수 있었고 테스트와 디버깅할 수 있는 시간을 벌 수 있었습니다.
+Specifically, I decided to use a list data type for the feature of adding and deleting classes. This choice made it easier to develop key features and significantly reduced the time required for testing and debugging.
 
-[API를 통해 동적으로 표시되었을 때 정보 구성]
+[Example of Data Strucutre for API Connection]
 
 ![](https://codetutorbot.blob.core.windows.net/image/5.png)
 
 
 
-[데이터 인터페이스]
+[Data Interface]
 
 ```json
 // src/hooks/useTimeTableData.tsx
-// key: 학급명, Tab에 표시되는 정보. 
-// value: 각 학급의 15개 교시를 나타내는 배열. 배열의 총 길이 15로 제한. 배열의 각 요소는 하루 동안의 타임 슬롯이며 필드는 startTime과 endTime을 포함
+// key: class name, displayed on Tab. 
+// value: each class consists of an array of up to 15 classes.
+// The maximum length of the array is 15. Each element of the array represents a time slot for a day and includes both startTime and endTime.
 {
     "2A-1 (201~)": [
         { "startTime": "08:00", "endTime": "08:50" },
         { "startTime": "09:00", "endTime": "10:15" },
         { "startTime": "10:30", "endTime": "12:00" },
-        { "startTime": "", "endTime": "" }, // 빈 문자열은 해당 시간대에 수업이 없음을 의미
+        { "startTime": "", "endTime": "" }, // Empty space means no class
         { "startTime": "", "endTime": "" }
     ],
     ...
@@ -204,21 +216,25 @@ ERP 등에서 API로 전달된 정보를 동적으로 표시하기 위해, 컴�
 
 
 
-### 2. 태블릿 화면 최적화
+### 2. Optimazation for Table PC Screen
 
-대부분 타블렛을 사용하는 사용자들을 위해, 페이지의 최대 너비를 600px로 설정했습니다. 이를 통해 페이지의 가로 너비를 좁히고, 세로로 더 많은 내용을 표시할 수 있도록 최적화하였습니다.
+Since most users will be accessing this system on table PCs, the maximum screen width has been set to 600px. To accomodate this, the width of the components has been reduced, and their height has been optimized to display more components effectively.
 
-[태블릿(600px 이상)]
+[Table PC(600px and above)]
 
 ![](https://codetutorbot.blob.core.windows.net/image/3.png)
 
 
 
-### 3. 커스텀 컴포넌트
+### 3. Component Customization
 
-필수 요구 사항에 따라 시간(00~24), 분(00~59)를 선택할 수 있는 외부 라이브러리 중 적합한 것이 없어서 TimePicker를 직접 개발했습니다. 개발 과정에서 제공된 UI에는 사용자가 설정한 데이터를 ERP로 전송하는 흐름을 파악하기 어려웠습니다. 이를 해결하기 위해, 직접 만든 TimePicker에 '확인' 버튼을 추가하였고, 사용자가 이 버튼을 클릭하면 정보가 갱신되고 ERP로 전송되도록 고도화했습니다. '확인' 버튼을 눌러야만, 선택창이 닫히게 하여 사용자의 바른 이용 시나리오를 강제하였습니다.
+To meet the requirements of this test, I searched extensively for a library that would allow users to select hours (00~24) and minute(00~59). However, no suitable lbrary was available, so I developed a custom TImePicker component.
 
-[MyTimePicker 사용 예]
+During the development process, I encountered challenges in understanding how users would configure the time slots and how that data would be posted to the ERP system. To address this issue, I added on 'OK' button to the TImePicker component. When the user clicks this button, the data is updated and sent to the ERP system.
+
+To close the TImePicker, the user must press the 'OK' button. This design choice ensures that users interact with the system correctly.
+
+[Example of Using MyTimePicker]
 
 ![](https://codetutorbot.blob.core.windows.net/image/3.gif)
 
@@ -226,10 +242,10 @@ ERP 등에서 API로 전달된 정보를 동적으로 표시하기 위해, 컴�
 
 
 
-## 마무리하며...
+## Reflections...
 
-이전 직장에서는 Javascript 만으로 개발을 진행했기에, Typescript를 사용할 기회에 대한 갈증이 있었습니다. 이번 과제를 통해 실전과 같은 환경에서 Typescript를 활용할 수 있어 매우 기뻤습니다. 또한, 과제를 진행하면서 출제자의 의도를 깊이 이해할 수 있었습니다. 단순히 화면을 구현하는 프론트엔드 개발자가 아니라, 요구사항을 충실히 반영하고 데이터 구조를 고려한 효율적인 앱 개발을 경험할 수 있어 매우 인상적이었습니다. 이를 통해 출제자의 고뇌와 실무 경험을 느낄 수 있었습니다.
+while working at CREVERSE, I mainly used Javascript for service development. Because of this, I've been eager to learn and work with TypeScript to enhance my skills. Completing this coding test in a practical environment allowed me to do just that, and I enjoyed the experience of using TypeScript.
 
+AS I worked through the task, I gained a deeper understanding of the test's purpose. The test maker isn't just looking for someone who can develop a front-end page. They want someone who can do so effectively, with careful consideration of the underlying data structure.
 
-
-부족한 제 개발 경력이지만, 이전 직장에서 교육 서비스와 관련된 다양한 경험을 쌓을 수 있었고,개발 외에도 여러 가지 업무를 통해 성장할 수 있었습니다. 그러나 프로젝트가 접혀나가면서 개발 이외의 업무가 주를 이루게 되어, 제 커리어 성장을 위해 퇴사를 결정했습니다. 이번 과제를 통해 다시 한번 성장에 대한 기대감을 갖게 되었고, 귀사에 합류하여 성공적인 서비스에 기여하며 제 기량과 역량을 더욱 발전시키고 싶습니다. 감사합니다.
+This experience is valuable in considering many thing to become a good forntend-developer.

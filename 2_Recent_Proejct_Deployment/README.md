@@ -35,7 +35,7 @@ This project is served within the LCMS system's iframe, where it receives the Cl
 
 
 
-## Installation and running
+## Installation and Running
 
 ### Requirements
 
@@ -177,7 +177,7 @@ The important values exchanged between components are managed in the global stat
 
 #### 3.1. Descriptions
 
-UI Components used for page design
+UI components used for page design
 
 
 
