@@ -102,7 +102,7 @@ To run this project, you need Node.js. If you have already installed Node.js, yo
 
    After the server starts, open your browser and go to http://localhost:3000/. You will see the home screen and explore the two key features of this project clicking both two buttons('Prompt Engineering GUI Tool for Primary and Secondary Students', 'Publishing Personal Chatbot Landing Page with no-coding').
 
-   ![](./../images/README/2-1.png)
+   ![](https://codetutorbot.blob.core.windows.net/image/2-1.png)
 
    ![](https://codetutorbot.blob.core.windows.net/image/2-2.png)
 
@@ -222,7 +222,7 @@ Custom hooks to verify authentication error, deliver Class ID and User ID and sc
 
 **[Before Excution]**
 
-![](./../images/README/2-4.png)
+![](https://codetutorbot.blob.core.windows.net/image/2-4.png)
 
 
 
