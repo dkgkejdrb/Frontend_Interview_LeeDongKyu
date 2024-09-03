@@ -1,4 +1,4 @@
-## Project Introduction
+## 📌 Project Introduction
 
 **NOTICE: This source code is my submission for a coding test as a application process. The code received a high score, allowing me to successfully pass the test due to its quality.**
 
@@ -29,7 +29,7 @@ Key features are:
 
 
 
-## Installation and Running
+## ⚙️ Installation and Running
 
 ### Requirements
 
@@ -101,7 +101,7 @@ To run this project, you need Node.js. If you have already installed Node.js, yo
 
 
 
-## Project Structure
+## 📁 Project Structure
 
 ### 1. Route Pages
 
@@ -179,7 +179,7 @@ UI Components used for the a responsive UI(tablet PC: 600px, desktop: 1024px) an
 
 
 
-## Enhancements 
+## 💡 Enhancements 
 
 ### 1. Designing for API Connection
 
@@ -242,7 +242,7 @@ To close the TImePicker, the user must press the 'OK' button. This design choice
 
 
 
-## Reflections...
+## 🤔 Reflections...
 
 while working at CREVERSE, I mainly used Javascript for service development. Because of this, I've been eager to learn and work with TypeScript to enhance my skills. Completing this coding test in a practical environment allowed me to do just that, and I enjoyed the experience of using TypeScript.
 

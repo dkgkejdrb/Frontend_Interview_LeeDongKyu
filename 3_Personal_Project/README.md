@@ -1,4 +1,4 @@
-## Project Introduction
+## 📌 Project Introduction
 
 **NOTICE_1: This source code is a demo version of a GPT-4 based code review web system for usability testing.**
 
@@ -30,7 +30,7 @@ Key features are:
 
 --------
 
-## System Configuration and Environment 
+## ⚙️ System Configuration and Environment 
 
 ![](https://codetutorbot.blob.core.windows.net/image/3-7.png)
 
@@ -44,7 +44,7 @@ Key features are:
 
 
 
-## Project Structure
+## 📁 Project Structure
 
 - **public/quizList_en.ts**: Coding quiz tree data node
 - **src/app/**
@@ -58,7 +58,7 @@ Key features are:
 
 
 
-## Conclusions and Furthe Study
+## 🤔 Conclusions and Furthe Study
 
 The results  demonstrated a performance to accurately identify error types, shorten  response times, lower API call costs, and maintain high-quality code  reviews without major issues. Feedback from participants affirmed the  tool’s suitability for teaching programming to primary and secondary  school students. Given these benefits, the system is anticipated to be a  efficient learning tool in programming language learning for educational  settings.
 

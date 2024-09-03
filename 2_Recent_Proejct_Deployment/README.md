@@ -1,4 +1,4 @@
-## Project Introduction
+## 📌 Project Introduction
 
 ### **NOTICE**: This source code is not related to any CREVERSE assets, and all CREVERSE assets are excluded from this project.
 
@@ -35,7 +35,7 @@ This project is served within the LCMS system's iframe, where it receives the Cl
 
 
 
-## Installation and Running
+## ⚙️ Installation and Running
 
 ### Requirements
 
@@ -112,7 +112,7 @@ To run this project, you need Node.js. If you have already installed Node.js, yo
 
 
 
-## Project Structure 
+## 📁 Project Structure 
 
 ### 1. Route Pages
 
@@ -232,7 +232,7 @@ Custom hooks to verify authentication error, deliver Class ID and User ID and sc
 
 
 
-## User Scenario
+## 💡 User Scenario
 
 **Step 1**: The user logs into the LCMS system and selects the GUI Tool for prompt engineering.
 
@@ -248,7 +248,7 @@ https://youtu.be/3OsL2jgHO3M?si=rdQuhNdMvOTxw2h5
 
 
 
-## Reflections...
+## 🤔 Reflections...
 
 While working at CREVERSE, we needed to develop a system that would allow primary and secondary students to engage in prompt engineering and take home their practical results, due to an MOU with Naver Hyper Clova. As a developer, I not only led the development of the main front-end but also gathered various requirements from content creators for the GUI Tool and documented them. Based on these requirements, I created a storyboard and collaborated with designers to finalize the design concept. Additionally, I wrote the backend API documentation and communicated with backend developers to ensure the preparation of essential elements for the service.
 
